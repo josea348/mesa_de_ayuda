@@ -50,9 +50,9 @@ cd /backend
 - Instala las dependencias de Laravel con Composer:
 composer install
 
-<!-- - Genera una clave única para la aplicación:
+- Genera una clave única para la aplicación:
 php artisan key:generate
- -->
+
 -Configura el archivo .env en el directorio del backend:
 
 Asegúrate de que los parámetros de conexión a la base de datos sean correctos:<br>
