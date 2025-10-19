@@ -20,13 +20,13 @@ return new class extends Migration
             $table->enum('estado', ['Abierto', 'En progreso', 'Cerrado'])->default('Abierto');
             $table->integer('solicitante');
             $table->integer('asignado')->nullable();
-            $table->timestamp('fechas')->useCurrent();
-            $table->timestamp('fechas_actualizacion')->useCurrent()->useCurrentOnUpdate();
+            // $table->enum('tipo_objetivo', ['ambiente','equipo']);
+            // $table->integer('objetivo_id');
+            $table->timestamps();
 
-            // Relaciones opcionales (si las tienes)
             $table->foreign('categoria')->references('id')->on('categorias')->onDelete('cascade');
             $table->foreign('solicitante')->references('identificacion')->on('users')->onDelete('cascade');
-            $table->foreign('asignado')->references('identificacion')->on('users')->onDelete('set null');;
+            $table->foreign('asignado')->references('identificacion')->on('users')->onDelete('set null');
         });
     }
 

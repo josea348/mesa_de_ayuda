@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Tickets extends Model
@@ -23,8 +24,8 @@ class Tickets extends Model
     public $timestamps = false;
 
     protected $casts = [
-        'fechas' => 'datetime',
-        'fecha_actualizacion' => 'datetime',
+        'created_at' => 'datetime', 
+        'updated_at' => 'datetime',
     ];
 
     /*
